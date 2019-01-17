@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<!-- Label - Blok -->
+
+<BorderPane prefHeight="192.0" prefWidth="521.0" style="-fx-background-color: goldenrod;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proftaak.VAT.Controller.BlokController">
+   <top>
+      <HBox alignment="TOP_CENTER" prefHeight="30.0" prefWidth="200.0">
+         <children>
+            <Label lineSpacing="2.0" text="Blok:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect></Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+
+    <!-- Gridpane and labels -->
+
+   <center>
+      <GridPane hgap="15.0" vgap="10.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="165.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="149.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label lineSpacing="2.0" text="Lengte:" GridPane.rowSpan="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect></Label>
+            <Label lineSpacing="2.0" text="Breedte:" GridPane.columnIndex="1" GridPane.rowSpan="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect></Label>
+            <Label lineSpacing="2.0" text="Hoogte:" GridPane.columnIndex="2" GridPane.rowSpan="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect></Label>
+
+             <!-- Spinners -->
+
+            <Spinner fx:id="cubeLength" editable="true" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin></Spinner>
+            <Spinner fx:id="cubeWidth" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Spinner fx:id="cubeHeight" editable="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <bottom>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+
+
+             <!-- Buttons: Clear and Save -->
+
+            <Button mnemonicParsing="false" onAction="#onSave" text="Save" />
+            <Button mnemonicParsing="false" onAction="#onClear" text="Clear" GridPane.columnIndex="1" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="30.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </bottom>
+</BorderPane>
